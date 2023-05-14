@@ -1,12 +1,14 @@
-def amicable(n):
-    s=0
-    for i in range(1,n+1):
-        if n%i==0:
-            s+=i
-    return s
-n=int(input())
-m=int(input())
-if amicable(n)==amicable(m):
+a=int(input())
+b=int(input())
+pfs_a=pfs_b=0
+for i in range(1,a):
+    if a%i==0:
+        pfs_a+=i
+for i in range(1,b):
+    if b%i==0:
+        pfs_b+=i
+if pfs_a==b and pfs_b==a:
     print('Amicable')
 else:
     print('Not Amicable')
+        
